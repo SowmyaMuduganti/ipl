@@ -15,7 +15,7 @@ window.onload = function() {
             err.classList.add('active');
         }
       }
-      xhttp.open("GET", "https://ipl-t20.herokuapp.com/teams", true);
+      xhttp.open("GET", "https://cors-anywhere.herokuapp.com/"+"https://ipl-t20.herokuapp.com/teams", true);
       xhttp.send();
 };
 
@@ -101,7 +101,7 @@ function createPlayersElements(team){
           }
     }
   };
-  xhttp.open("GET", "https://ipl-t20.herokuapp.com/teams/"+team, true);
+  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/"+"https://ipl-t20.herokuapp.com/teams/"+team, true);
   xhttp.send();
 }
 function app() {
