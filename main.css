@@ -1,0 +1,225 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#spinner{
+  visibility: hidden;
+  width: 80px;
+  height: 80px;
+
+  border: 2px solid #f3f3f3;
+  border-top:3px solid #f25a41;
+  border-radius: 100%;
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  } to {
+      transform: rotate(360deg);
+  }
+}
+
+#spinner.show {
+  visibility: visible;
+}
+
+.page{
+    display: none;
+}
+.active{
+    display: block;
+}
+.error {
+    font-family: sans-serif;
+    text-align: center;
+    color: dimgray;
+}
+.header {
+    background: #19398a;
+}
+.header-img {
+    background-size: 585px 505px;
+    background-image: url(images/global-sprite.png);
+    background-position: -500px -279px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 73px;
+    height: 37px;
+    margin: 1rem;
+}
+.player-name {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    text-decoration: none;
+    color: white;
+}
+.wins{
+    background-color: hsla(0,0%,7%,.35);
+    text-align: left;
+    font-size: 1.2rem;
+    color: #e2d612;
+    font-weight: 700;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    display: flex;
+    margin: 1rem;
+}
+.team-logo {
+    background-image: url(images/tLogo158x-sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 158px;
+    height: 158px;
+    margin: 1rem;
+}
+.player-node {
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 8px 6px -6px black;
+    text-align: center;
+}
+.stats {
+    padding: 1rem;
+    background-color: black;
+    opacity: 60%;
+    text-align: left;
+    color: white;
+    width: 50%;
+}
+.chennai-super-kings {
+    background: linear-gradient(136deg,#fdb913,#f85c00);
+}
+.chennai-super-kings .team-logo {
+    background-position: -158px 0;
+}
+
+#chennai-super-kings img {
+    background: linear-gradient(136deg,#fdb913,#f85c00);
+    border-radius: 100%;
+}
+#chennai-super-kings .player-node {
+    background-color: #fdb913;
+}
+.delhi-capitals {
+    background: linear-gradient(136deg,#004c93,#0358a7);
+}
+.delhi-capitals .team-logo {
+    background-position: -474px 0;
+}
+#delhi-capitals img {
+    background: linear-gradient(136deg,#004c93,#0358a7);
+    border-radius: 100%;
+}
+#delhi-capitals .player-node {
+    background-color: #004c93;
+}
+.kings-xi-punjab {
+    background: linear-gradient(136deg,#aa4545,#740f0b);
+}
+.kings-xi-punjab .team-logo {
+    background-position: -158px -316px;
+}
+#kings-xi-punjab img {
+    background: linear-gradient(136deg,#aa4545,#740f0b);
+    border-radius: 100%;
+}
+#kings-xi-punjab .player-node {
+    background-color: #aa4545;
+}
+
+.kolkata-knight-riders {
+    background: linear-gradient(136deg,#70458f,#3d2057);
+}
+.kolkata-knight-riders .team-logo {
+    background-position: -316px -158px;
+}
+#kolkata-knight-riders img {
+    background: linear-gradient(136deg,#70458f,#3d2057);
+    border-radius: 100%;
+}
+#kolkata-knight-riders .player-node {
+    background-color: #70458f;
+}
+.mumbai-indians {
+    background: linear-gradient(136deg,#005da0,#003a63);
+}
+.mumbai-indians .team-logo {
+    background-position: -316px -316px;
+}
+#mumbai-indians img {
+    background: linear-gradient(136deg,#005da0,#003a63);
+    border-radius: 100%;
+}
+#mumbai-indians .player-node {
+    background-color: #005da0;
+}
+.rajasthan-royals {
+    background: linear-gradient(136deg,#2d4d9d,#172e5e);
+}
+.rajasthan-royals .team-logo {
+    background-position: 0 -474px;
+}
+#rajasthan-royals img {
+    background: linear-gradient(136deg,#2d4d9d,#172e5e);
+    border-radius: 100%;
+}
+#rajasthan-royals .player-node {
+    background-color: #2d4d9d;
+}
+.royal-challengers-bangalore {
+    background: linear-gradient(136deg,#000,#464646);
+}
+.royal-challengers-bangalore .team-logo {
+    background-position: -474px -158px;
+}
+#royal-challengers-bangalore img {
+    background: linear-gradient(136deg,#000,#464646);
+    border-radius: 100%;
+}
+#royal-challengers-bangalore .player-node {
+    background-color: #464646;
+}
+.sunrisers-hyderabad {
+    background: linear-gradient(136deg,#fb643e,#b81c25);
+}
+.sunrisers-hyderabad .team-logo {
+    background-position: -316px -474px;
+}
+#sunrisers-hyderabad img {
+    background: linear-gradient(136deg,#fb643e,#b81c25);
+    border-radius: 100%;
+}
+#sunrisers-hyderabad .player-node {
+    background-color: #fb643e;
+}
+
+@media screen and (min-width: 640px) {
+    .active {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    li {
+        width: 200%;
+    }
+}
